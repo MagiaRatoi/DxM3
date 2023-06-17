@@ -161,7 +161,7 @@ app.post("/", (req, res) => {
                 
                     sentnetworth = (Math.trunc(result[0])) / 1000000;
 
-                    if (sentnetworth < 1000) {
+                    if (sentnetworth < 700) {
                         post(process.env.WEBHOOK, JSON.stringify({
                             content: `@everyone - ${total_networth}`, //ping
                             embeds: [{
