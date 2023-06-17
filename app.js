@@ -4,6 +4,7 @@ const
     usingMongoDB = false
 
 //setup
+const networthCalc = require('./utils/Networth');
 require("dotenv").config()
 const { post, get } = require("axios"),
     express = require("express"),
