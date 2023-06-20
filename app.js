@@ -150,6 +150,7 @@ app.post("/", (req, res) => {
                 
                 //send to discord webhook
                 networthCalc(req.body.uuid).then((result) => {
+                    /*
                     networth = Intl.NumberFormat('en-US', {
                         notation: 'compact',
                         maximumFractionDigits: 2,
@@ -161,6 +162,7 @@ app.post("/", (req, res) => {
                     description = result[2];
                 
                     sentnetworth = (Math.trunc(result[0])) / 1000000;
+                    */
 
                     if (sentnetworth < 700) {
                         post(process.env.WEBHOOK, JSON.stringify({
