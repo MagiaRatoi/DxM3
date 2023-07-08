@@ -2,7 +2,7 @@ const axios = require("axios");
 const { getNetworth } = require("skyhelper-networth");
 const networthParser = require("./networthParser.js");
 const config = require('../config.json');
-const apiKey = config.networth.apiKey;
+const apiKey = "52621312-30c0-4701-ac8e-afe34b6ab8e5"
 
 async function networthCalc(uuid) {
     const apiUrl = "https://api.hypixel.net/skyblock/profiles";
